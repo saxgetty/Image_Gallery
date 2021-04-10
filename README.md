@@ -19,9 +19,9 @@ Please follow the instructions below and fill in the information requested when 
 # Build/Run Instructions
 
 ## Build Instructions
-1. 
-2. 
+1. git clone https://github.com/csc317-sp21/csc317-termproject-saxgetty.git
+2. cd csc317-termproject-saxgetty/application
+3. rpm install
 
 ## Run Instructions
 1. npm start
-2. 
