@@ -8,20 +8,20 @@ Please follow the instructions below and fill in the information requested when 
 
 ## Student Information
 
-|               | Information   |
-|:-------------:|:-------------:|
-| Student Name  | name-here     |
-| Student ID    | id-here       |
-| Student Email | email-here    |
+|               | Information                   |
+|:-------------:|:-----------------------------:|
+| Student Name  | Samantha Saxton-Getty         |
+| Student ID    | 916198535                     |
+| Student Email | ssaxtongetty@mail.sfsu.edu    |
 
 
 
 # Build/Run Instructions
 
 ## Build Instructions
-1. steps here
+1. npm start
 2. steps here
 
 ## Run Instructions
-1. steps here
+1. npm start
 2. steps here 
