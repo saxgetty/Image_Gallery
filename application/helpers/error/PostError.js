@@ -11,7 +11,7 @@ class PostError extends Error {
     }
 
     getRedirectURL() {
-        return this.getRedirectURL;
+        return this.redirectURL;
     }
 
     getStatus() {
