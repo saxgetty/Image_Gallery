@@ -1,0 +1,44 @@
+<head>
+	<title> Image Upload </title>
+</head>
+<body>
+	<div class="center">
+		<header>
+			<h2> ~ POST AN IMAGE ~ </h2>
+		</header>
+		<section>
+			• Create a post title and upload an image below • 
+		</section>
+		<form>
+			<legend> <strong> Post Information </strong> </legend>
+
+			<label for="postTitle"> Enter your post title: </label>
+			<input type="text" id="setPostTitle" name="postTitle" placeholder="Title" required />
+
+			<br />
+
+			<label for="description"> Give your post a description: </label>
+			<input type="text" id="setDescription" name="description" placeholder="Description" required />
+
+			<br />
+
+			<label for="image"> Pick your image to post: </label>
+			<input type="file" id="setImage" name="image" required />
+
+			<br />
+
+			<div>
+				<section>
+					Please accept the policy below for uploading images: 
+				</section>
+			</div>
+
+			<label for="policy"> Do you accept the <a href="link"> Acceptable Use Policy </a> ? </label>
+			<input type="checkbox" id="setPolicy" name="policy" required />
+
+			<button type="submit"> Submit </button>
+			<button type="reset"> Reset </button>
+		</form>
+	</div>
+</body>
+</html>

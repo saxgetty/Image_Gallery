@@ -1,0 +1,50 @@
+body {
+
+    color:black;
+    font-family: Courier New;
+    background-image: url(https://i.imgur.com/qcxrA9t.png);
+}
+
+label {
+
+    color:black;
+}
+
+button {
+
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {
+
+    background-color: #3e8e41;
+    
+}
+
+button:active {
+
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.center {
+
+    text-align: center;
+    border-radius: .25rem;
+    border: .1rem solid white;
+    box-shadow: 5x 5x 5x black;
+    width: 50%;
+    margin: auto;
+    padding: 40px;
+}
