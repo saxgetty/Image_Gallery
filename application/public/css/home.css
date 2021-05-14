@@ -58,6 +58,19 @@ body {
     grid-area: container;
 }
 
+#flash-message {
+
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,0);
+}
+
+#flash-message div {
+
+  text-align: center;
+}
+
 .website-header {
 
     grid-area: header;

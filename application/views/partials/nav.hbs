@@ -10,10 +10,11 @@
     </div>
 
     <a href="/postimage" id="postButton" class="nav-items anchorButtons">Post</a>
-    {{!-- {{#if}}
 
-    {{#else}}
-
-    {{/if}} --}}
-    <a href="/login" id="authenticateButton" class="nav-items anchorButtons">Log in</a>
+    {{#if logged}}
+    <a id="logout-button" class="nav-items anchorButtons">Log Out</a>   
+    {{else}}
+    <a href="/login" id="logout-button" class="nav-items anchorButtons">Log in</a>
+    {{/if}}
+    
 </nav>

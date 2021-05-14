@@ -2,10 +2,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var sessions = require('express-session');
+var mysqlSession = require('express-mysql-session')(sessions);
+var flash = require('express-flash');
 // Import express handlebars
 var handlebars = require('express-handlebars');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+// var dbRouter = require('./routes/dbtest');
+var postsRouter = require('./routes/posts');
 var errorPrint = require('./helpers/debug/debugprinters').errorPrint;
 var requestPrint = require('./helpers/debug/debugprinters').requestPrint;
 
@@ -19,6 +24,9 @@ app.engine(
         extname: ".hbs",
         defaultLayout: "body",
         helpers: {
+            emptyObject: (obj) => {
+                return !(obj.constructor === Object && Object.keys(obj).length == 0);
+            }
         /** 
         * If you need more helpers you can register them here
         */
@@ -26,6 +34,17 @@ app.engine(
     })
 );
 
+var mysqlSessionStore = new mysqlSession({/* using default options */},require('./config/database'));
+
+app.use(sessions({
+    key: "csid",
+    secret: "this is a secret from csc317",
+    store: mysqlSessionStore,
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(flash());
 app.set("view engine", "hbs");
 app.use(logger('dev'));
 app.use(express.json());
@@ -38,12 +57,28 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use((req, res, next) => {
+
+    console.log(req.session);
+    if(req.session.username) {
+        res.locals.logged = true;
+    }
+    next();
+});
+
 app.use('/', indexRouter);
+// app.use('/dbtest', dbRouter);
 app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
 
 app.use((err, req, res, next) => {
     errorPrint(err);
     res.render('error', {err_message: err});
+});
+
+app.use((err, req, res, next) => {
+    res.status(500);
+    res.send('something went wrong with your db');
 });
 
 module.exports = app;

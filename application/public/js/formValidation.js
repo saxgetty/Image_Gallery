@@ -11,7 +11,7 @@ form.addEventListener("submit", e => {
     let outputMessages = [];
     let readyToSubmit = true;
 
-    e.preventDefault();
+    // e.preventDefault();
 
     // Regex Expressions
     let regexReq1 = /^[A-Za-z]/; // Username begins with a character
@@ -87,7 +87,7 @@ form.addEventListener("submit", e => {
     if (outputMessages.length) {
         // If all fields are filled out correctly, alert that and show it was a success, otherwise failure
         if (readyToSubmit == true) {
-            e.preventDefault();
+            // e.preventDefault();
             outputMessages.push("\n\t\t\t\t\t\t✨SUCCESS✨")
             alert(outputMessages.join(""));
         }
