@@ -3,7 +3,6 @@ const { route } = require('../routes');
 
 const routeProtectors = {};
 
-
 routeProtectors.userIsLoggedIn = function(req, res, next) {
     if (req.session.username) {
         successPrint('User is logged in!');

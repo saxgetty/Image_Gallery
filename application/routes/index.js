@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var isLoggedIn = require('../middleware/routeprotectors').userIsLoggedIn;
+const {getRecentPosts, getPostById, getCommentsByPostId} = require('../middleware/postsmiddleware'); 
+var db = require("../config/database");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  //next(new Error('test'));
-  res.render('home', {title: "Student App", css: "home"}); // Don't care about the extension
+router.get('/', getRecentPosts, (req, res, next) => {
+  res.render('index', {title: "Student App", css: "home"});
 });
 
 router.get('/login',(req, res, next) => {
@@ -21,8 +22,8 @@ router.get('/postimage', (req, res, next) => {
   res.render("postimage", {title: "Create a Post", css: "form"});
 });
 
-// router.get('/imagepost',(req, res, next) => {
-//   res.render("imagepost");
-// });
+router.get('/post/:id(\\d+)', getPostById, getCommentsByPostId, (req, res, next) => {
+      res.render('imagepost', {title: `Post ${req.params.id}`, css: "home"});
+});
 
 module.exports = router;

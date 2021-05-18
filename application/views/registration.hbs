@@ -4,11 +4,11 @@
 </head>
 <body>
 	<header>
-		<h2> Create Your Account: </h2>
+		<h2 class="subject"> CREATE YOUR ACCOUNT </h2>
 	</header>
 	<form id="form" method="POST" action="/users/register" enctype="application/x-www-form-urlencoded" />
-		<fieldset>
-			<legend> <strong> Account Requirements </strong> </legend>
+		<fieldset class="fieldset-one">
+			<legend> <strong class="acc-req"> Account Requirements </strong> </legend>
 
 			<label for="username"> Create your Username: </label>
 			<input type="text" id="setUsername" name="username" placeholder="Username" required />
@@ -29,11 +29,11 @@
 			<input type="password" id="setConfirmPw" name="confirmPw" placeholder="Confirm Password" required />
 
 		</fieldset>
-        <fieldset>
-            <legend> <strong> Age & Privacy Confirmations </strong> </legend>
+        <fieldset class="fieldset-one">
+            <legend> <strong class="acc-req2"> Age & Privacy Confirmations </strong> </legend>
 
             <p>
-                <section>
+                <section class="section-color">
                     Please check the box(s) below if you agree:
                 </section>
             </p>
@@ -47,7 +47,7 @@
             <input type="checkbox" id="setRules" name="rules" required />
         </fieldset>
         
-        <button type="submit"> Submit </button>
-        <button type="reset"> Reset </button>
+        <button type="submit" class="submit-button"> Submit </button>
+        <button type="reset" class="reset-button"> Reset </button>
 	</form>
 </body>

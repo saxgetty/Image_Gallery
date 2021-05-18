@@ -1,20 +1,32 @@
 <nav id="navBar">
-    <div id="brand" class="nav-items">
-        <a href="/" id="brandAnchor"><span id="brandText"><i style="marginRight: .2rem;"></i>Sami's Website</span></a>
-    </div>
-
-    <input id="searchText" name="searchText" type="text">
-
-    <div id="textBarIcon">
-        <i id="sicon" class="fas fa-search nav-items"></i>
-    </div>
-
-    <a href="/postimage" id="postButton" class="nav-items anchorButtons">Post</a>
+    {{!-- <a href="/postimage" id="postButton" class="nav-items anchorButtons">Post</a>
 
     {{#if logged}}
     <a id="logout-button" class="nav-items anchorButtons">Log Out</a>   
     {{else}}
     <a href="/login" id="logout-button" class="nav-items anchorButtons">Log in</a>
-    {{/if}}
-    
+    {{/if}} --}}
+    <div>
+        <div class="container">
+            {{!-- <div id="brand" class="nav-items">
+                <a href="#" id="brandAnchor"><span id="brandText"><i style="marginRight: .2rem;"></i>Sami's Website</span></a>
+            </div> --}}
+            <div id="logo" class="logo-header">
+                <img src="../public/images/icons/wow.png" class="logo-position">
+            </div>
+            <div class="search-bar">
+                <input id="search-text" class="to-search" name="searchText" type="text" placeholder="Enter your search">
+                <button type="submit" id="search-button" class="search-submit">Search</button>
+            </div>
+            <ul>
+                <li><a href="/"><i id="home" class="nav-items anchorButtons" aria-hidden="true"></i>HOME</a></li> 
+                <li><a href="/postimage"><i id="postButton" class="nav-items anchorButtons" aria-hidden="true"></i>POST</a></li>
+                {{#if logged}}
+                <li><a href="#"><i id="logout-button" class="nav-items anchorButtons" aria-hidden="true">LOGOUT</i></a></li>
+                {{else}}
+                <li><a href="/login"><i id="logout-button" class="nav-items anchorButtons" aria-hidden="true"></i>LOGIN</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
 </nav>

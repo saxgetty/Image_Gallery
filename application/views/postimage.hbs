@@ -3,14 +3,9 @@
 </head>
 <body>
 	<div class="center">
-		<header>
 			<h2> ~ POST AN IMAGE ~ </h2>
-		</header>
-		<section>
-			• Create a post title and upload an image below • 
-		</section>
-		<form id = "post-image" method="POST" enctype="multipart/form-data" action='/posts/createPost'>
-			<legend> <strong> Post Information </strong> </legend>
+		<form id = "post-image" class="post-stuff" method="POST" enctype="multipart/form-data" action='/posts/createPost'>
+			<legend> <strong class="post-strong-title"> Post Information </strong> </legend>
 
 			<label for="postTitle"> Enter your post title: </label>
 			<input type="text" id="setPostTitle" name="postTitle" placeholder="Title" required />
