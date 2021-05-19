@@ -155,13 +155,21 @@ label {
     text-align: center;
 }
 
-.footer-tag {
+.footer-name {
 
-    position: static;
-    margin-top: 0px;
+    position: absolute;
+    left: 46%;
     text-align: center;
     color: #50738E;
-}
+  }
+  
+  .link-footer {
+  
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color: #50738E;
+  }
 
 .center {
 

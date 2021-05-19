@@ -116,7 +116,7 @@ router.post('/login', (req, res, next) => {
       res.redirect('/');
     }
     else {
-      throw new UserError(`Invalid ${username} and/or password!`, "/login", 200);
+      throw new UserError(`Invalid username and/or password!`, "/login", 200);
       res.redirect('/');
     }
 
@@ -128,7 +128,7 @@ router.post('/login', (req, res, next) => {
         req.flash('error', err.getMessage());
         res.status(err.getStatus());
         // res.redirect('/');
-        res.redirect("/users/logout");
+        res.redirect("/login");
       }
       else {
         next(err);
