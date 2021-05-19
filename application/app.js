@@ -14,7 +14,7 @@ var errorPrint = require('./helpers/debug/debugprinters').errorPrint;
 var requestPrint = require('./helpers/debug/debugprinters').requestPrint;
 
 var app = express();
-// Configures handlebars template engine
+
 app.engine(
     "hbs",
     handlebars({
@@ -26,9 +26,6 @@ app.engine(
             emptyObject: (obj) => {
                 return !(obj.constructor === Object && Object.keys(obj).length == 0);
             }
-        /** 
-        * If you need more helpers you can register them here
-        */
         }
     })
 );
@@ -66,7 +63,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-// app.use('/dbtest', dbRouter);
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
 app.use('/comments', commentRouter);

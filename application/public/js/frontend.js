@@ -1,5 +1,3 @@
-//const { json } = require("express");
-
 function setFlashMessageFadeOut(flashMessageElement) {
 
     setTimeout(() => {

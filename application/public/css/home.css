@@ -86,7 +86,7 @@ ul li a:hover {
 
 .date-posted {
 
-  text-align: right ;
+  text-align: right;
 }
 
 .card-frame {
@@ -107,6 +107,7 @@ ul li a:hover {
   position: static;
   margin-top: 0px;
   text-align: center;
+  color: #50738E;
 }
 
 .search-bar {
@@ -228,7 +229,7 @@ ul li a:hover {
 .lead {
 
   font-size: 1rem;
-  border: 2px dotted white;
+  border: 2px solid #50738E;
   border-radius: .50rem;
 }
 

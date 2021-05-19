@@ -8,13 +8,10 @@
         <title>{{title}}</title>
         <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css"> </linkrel>
         <link rel="stylesheet" type="text/css" href="../../public/css/{{css}}.css"> </linkrel>
-        {{!-- <link rel="stylesheet" type="text/css" href="../../public/css/{{css}}.css"> </linkrel> --}}
         <script defer src="/public/js/frontend.js"></script>
-        {{!-- <script defer src="/middleware/routeprotectors.js"></script> --}}
     </head>
     <body>
         
-        {{!-- {{log this}} --}}
         {{> header}}
         {{#if (emptyObject messages)}}
         {{> flashmessage}}

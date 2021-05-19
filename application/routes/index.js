@@ -4,7 +4,6 @@ var isLoggedIn = require('../middleware/routeprotectors').userIsLoggedIn;
 const {getRecentPosts, getPostById, getCommentsByPostId} = require('../middleware/postsmiddleware'); 
 var db = require("../config/database");
 
-/* GET home page. */
 router.get('/', getRecentPosts, (req, res, next) => {
   res.render('index', {title: "Student App", css: "home"});
 });

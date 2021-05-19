@@ -35,9 +35,6 @@ router.post('/createPost', uploader.single("image"), (req, res, next) => {
         let fileUploaded = req.file.path;
         let fileAsThumbnail = `thumbnail-${req.file.filename}`;
         let destinationOfThumbnail = req.file.destination + "/" + fileAsThumbnail;
-        // let fileUploaded = req.file.path;
-        // let fileAsThumbnail = `thumbnail-${req.file.path}`;
-        // let destinationOfThumbnail = req.file.destination + "/" + req.file.filename; // This is the thing that fucked everything up.
         let fk_userId = req.session.userId;
         sharp(fileUploaded)
         .resize(500)
@@ -47,7 +44,6 @@ router.post('/createPost', uploader.single("image"), (req, res, next) => {
         })
         .then((postWasCreated) => {
             if (postWasCreated) {
-                // console.log("HERERERERE")
                 req.flash('success', "Your post was created successfully!");
                 res.redirect('/');
             }

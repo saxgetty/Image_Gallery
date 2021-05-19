@@ -98,78 +98,7 @@ router.post('/register', [
       next(err);
     }
   });
-/*
-  db.execute("SELECT * FROM users WHERE username=?", [username]).then(([results, fields]) => {
-
-    if(results && results.length == 0) {
-      return db.execute("SELECT * FROM users WHERE email=?", [email]);
-    }
-    else {
-      throw new UserError(
-        "Registration Failed: Username already exists",
-        "/registration",
-        200
-      );     
-    }
-  })
-  .then(([results, fields]) => {
-
-    if(results && results.length == 0) {
-      return bcrypt.hash(password, 15);
-    }
-    else {
-      throw new UserError(
-        "Registration Failed: Email already exists.",
-        "/registration",
-        200
-      );     
-    }
-  }).then((hashedPassword) => {
-
-    let baseSQL = "INSERT INTO users (username, email, password, created) VALUES (?,?,?,now());"
-    return db.execute(baseSQL, [username ,email, hashedPassword]);
-
-    // if(results && results.length == 0) {
-      
-    // }
-    // else {
-    //   throw new UserError(
-    //     "Registration Failed: Email already exists.",
-    //     "/registration",
-    //     200
-    //   );     
-    // }
-  }).then(([results, fields]) => {
-  
-    if(results && results.affectedRows) {
-      successPrint(`User.js --> User ${username} was created!`);
-      res.flash('success', 'User account has been made!');
-      res.redirect('/login');
-    }
-    else {
-      throw new UserError(
-        "Server Error, user could not be created.",
-        "/registration",
-        500
-      );
-    }
-  }).catch((err) => {
-
-      errorPrint("user could not be made", err);
-
-      if (err instanceof UserError) {
-        errorPrint(err.getMessage());
-        req.flash('error', err.getMessage());
-        res.status(err.getStatus());
-        res.redirect(err.getRedirectURL());
-      }
-      else {
-        next(err);
-      }
-    });
-    */
 });
-
 
 router.post('/login', (req, res, next) => {
 

@@ -131,12 +131,12 @@ ul li a:hover {
 
 .acc-req {
 
-    color:white;
+    color: #50738E;
 }
 
 .acc-req2 {
 
-    color:white;
+    color: #50738E;
 }
 
 .input-info {
@@ -160,6 +160,7 @@ label {
     position: static;
     margin-top: 0px;
     text-align: center;
+    color: #50738E;
 }
 
 .center {
