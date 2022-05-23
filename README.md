@@ -1,4 +1,8 @@
-# CSC 317 Term Project
+# World of Warcraft RP Image Gallery
+
+Preview this project below on YouTube!
+
+[![demo_vid](https://cdn.discordapp.com/attachments/835591432164212769/978138415591731271/unknown.png)](https://youtu.be/toRIUkHKT-w)
 
 ## Purpose
 
@@ -19,7 +23,7 @@ Please follow the instructions below and fill in the information requested when 
 # Build/Run Instructions
 
 ## Build Instructions
-1. git clone https://github.com/csc317-sp21/csc317-termproject-saxgetty.git
+1. git clone https://github.com/saxgetty/Image_Gallery.git
 2. cd csc317-termproject-saxgetty/application
 3. npm install
 
